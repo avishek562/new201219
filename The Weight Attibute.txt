@@ -1,0 +1,1124 @@
+Kol router
+-----------------------------------------------------------
+
+Connected to Dynamips VM "KOLKATA-ROUTER" (ID 9, type c7200) - Console port
+Press ENTER to get the prompt.
+ssor (revision A) with 491520K/32768K bytes of memory.Installed image archive
+
+Processor board ID 4279256517
+R7000 CPU at 150MHz, Implementation 39, Rev 2.1, 256KB L2, 512KB L3 Cache
+6 slot VXR midplane, Version 2.1
+
+Last reset from power-on
+
+PCI bus mb0_mb1 (Slots 0, 1, 3 and 5) has a capacity of 600 bandwidth points.
+Current configuration on bus mb0_mb1 has a total of 400 bandwidth points.
+This configuration is within the PCI bus capacity and is supported.
+
+PCI bus mb2 (Slots 2, 4, 6) has a capacity of 600 bandwidth points.
+Current configuration on bus mb2 has a total of 0 bandwidth points
+This configuration is within the PCI bus capacity and is supported.
+
+Please refer to the following document "Cisco 7200 Series Port Adaptor
+Hardware Configuration Guidelines" on Cisco.com <http://www.cisco.com>
+for c7200 bandwidth points oversubscription and usage guidelines.
+
+
+2 FastEthernet interfaces
+4 Serial interfaces
+509K bytes of NVRAM.
+
+8192K bytes of Flash internal SIMM (Sector size 256K).
+SETUP: new interface FastEthernet0/0 placed in "shutdown" state
+SETUP: new interface FastEthernet0/1 placed in "shutdown" state
+SETUP: new interface Serial1/0 placed in "shutdown" state
+SETUP: new interface Serial1/1 placed in "shutdown" state
+SETUP: new interface Serial1/2 placed in "shutdown" state
+SETUP: new interface Serial1/3 placed in "shutdown" state
+% Crashinfo may not be recovered at bootflash:crashinfo
+% This file system device reports an error
+
+
+Press RETURN to get started!
+
+
+*Sep 10 18:10:02.107: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory
+*Sep 10 18:10:20.891: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Sep 10 18:10:20.899: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:20.907: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+*Sep 10 18:10:20.911: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+*Sep 10 18:10:20.923: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+*Sep 10 18:10:20.935: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+*Sep 10 18:10:20.947: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+*Sep 10 18:10:21.659: %SYS-5-CONFIG_I: Configured from memory by console
+*Sep 10 18:10:22.083: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Sep 10 18:10:22.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Sep 10 18:10:22.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to down
+*Sep 10 18:10:22.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to down
+*Sep 10 18:10:22.091: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to down
+*Sep 10 18:10:22.091: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to down
+*Sep 10 18:10:22.583: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.0(1)M, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Wed 30-Sep-09 07:48 by prod_rel_team
+*Sep 10 18:10:22.611: %SNMP-5-COLDSTART: SNMP agent on host KOLKATA-ROUTER is undergoing a cold start
+*Sep 10 18:10:22.707: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Sep 10 18:10:22.707: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Sep 10 18:10:23.663: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Sep 10 18:10:23.671: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Sep 10 18:10:23.675: %LINK-5-CHANGED: Interface Serial1/0, changed state to administratively down
+*Sep 10 18:10:23.703: %LINK-5-CHANGED: Interface Serial1/1, changed state to administratively down
+*Sep 10 18:10:23.723: %LINK-5-CHANGED: Interface Serial1/2, changed state to administratively down
+*Sep 10 18:10:23.735: %LINK-5-CHANGED: Interface Serial1/3, changed state to administratively down
+KOLKATA-ROUTER#CONF T
+Enter configuration commands, one per line.  End with CNTL/Z.
+KOLKATA-ROUTER(config)#int s1/1
+KOLKATA-ROUTER(config-if)#ip addr 100.0.0.2 255.255.255.252
+KOLKATA-ROUTER(config-if)#no sh
+KOLKATA-ROUTER(config-if)#no shutdown
+KOLKATA-ROUTER(config-if)#ex
+KOLKATA-ROUTER(config-if)#exit
+*Sep 10 18:28:19.975: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+KOLKATA-ROUTER(config-if)#exit
+*Sep 10 18:28:20.983: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to up
+KOLKATA-ROUTER(config-if)#exit
+KOLKATA-ROUTER(config)#int s1/2
+KOLKATA-ROUTER(config-if)#
+*Sep 10 18:28:42.031: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to down
+KOLKATA-ROUTER(config-if)#no sh
+KOLKATA-ROUTER(config-if)#no shutdown
+KOLKATA-ROUTER(config-if)#ip addr
+*Sep 10 18:30:10.455: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+*Sep 10 18:30:11.503: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to up
+KOLKATA-ROUTER(config-if)#ip addr 103
+% Incomplete command.
+
+KOLKATA-ROUTER(config-if)#ip addr 103.0.0.1 255.255.255.252
+KOLKATA-ROUTER(config-if)#
+*Sep 10 18:30:32.099: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to down
+KOLKATA-ROUTER(config-if)#ex
+KOLKATA-ROUTER(config-if)#exit
+KOLKATA-ROUTER(config)#int loo
+KOLKATA-ROUTER(config)#int loopback 0
+KOLKATA-ROUTER(config-if)#ip addr
+*Sep 10 18:30:42.571: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+KOLKATA-ROUTER(config-if)#ip addr 200.0.0.1 255.255.255.0
+KOLKATA-ROUTER(config-if)#ex
+KOLKATA-ROUTER(config-if)#exit
+KOLKATA-ROUTER(config)#int loo
+KOLKATA-ROUTER(config)#int loopback 1
+KOLKATA-ROUTER(config-if)#ip ad
+*Sep 10 18:30:59.655: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+KOLKATA-ROUTER(config-if)#ip addr 201.0.0.1 255.255.255.0
+KOLKATA-ROUTER(config-if)#ex
+KOLKATA-ROUTER(config-if)#exit
+KOLKATA-ROUTER(config)#router bg
+KOLKATA-ROUTER(config)#router bgp 1
+KOLKATA-ROUTER(config-router)#bg
+KOLKATA-ROUTER(config-router)#bgp rou
+KOLKATA-ROUTER(config-router)#bgp router-id 1.1.1.1
+KOLKATA-ROUTER(config-router)#net
+KOLKATA-ROUTER(config-router)#network 100.0.0.0 mask 255.255.255.252
+KOLKATA-ROUTER(config-router)#network 103.0.0.0 mask 255.255.255.252
+KOLKATA-ROUTER(config-router)#network 200.0.0.0 mask 255.255.255.0
+KOLKATA-ROUTER(config-router)#network 201.0.0.0 mas
+KOLKATA-ROUTER(config-router)#network 201.0.0.0 mask 255.255.255.0
+KOLKATA-ROUTER(config-router)#
+KOLKATA-ROUTER(config-router)#nei
+KOLKATA-ROUTER(config-router)#neighbor 103.0.0.2 rem
+KOLKATA-ROUTER(config-router)#neighbor 103.0.0.2 remot
+KOLKATA-ROUTER(config-router)#neighbor 103.0.0.2 remote-as 3
+KOLKATA-ROUTER(config-router)#nei
+KOLKATA-ROUTER(config-router)#neighbor 100.0.0.1 remo
+KOLKATA-ROUTER(config-router)#neighbor 100.0.0.1 remot
+KOLKATA-ROUTER(config-router)#neighbor 100.0.0.1 remote-as 2
+KOLKATA-ROUTER(config-router)#end
+KOLKATA-ROUTER#
+*Sep 10 18:33:40.339: %SYS-5-CONFIG_I: Configured from console by console
+KOLKATA-ROUTER#wr
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+KOLKATA-ROUTER#
+*Sep 10 18:34:22.027: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to up
+KOLKATA-ROUTER#
+*Sep 10 18:37:04.275: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:37:04.275: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:04.683: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:37:06.511: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:06.511: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:13.411: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:37:13.411: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+*Sep 10 18:37:13.615: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.1 active 2/8 (no supported AFI/SAFI) 3 bytes 000000
+KOLKATA-ROUTER#
+*Sep 10 18:37:13.615: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification received
+KOLKATA-ROUTER#
+*Sep 10 18:37:27.831: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:27.831: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+*Sep 10 18:37:28.843: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:28.843: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:29.251: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:37:37.987: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:37.987: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:42.823: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:37:42.827: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:42.983: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+*Sep 10 18:37:44.035: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:44.039: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:48.755: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:37:48.755: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:48.959: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:37:56.071: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:56.071: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:57.495: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:37:57.495: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:37:57.899: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:04.863: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:04.867: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:07.283: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:38:07.287: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:07.487: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:15.935: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:15.935: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:19.699: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:38:19.699: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:19.895: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:23.591: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:23.591: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:27.031: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:27.031: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:27.235: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:31.299: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:31.299: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+*Sep 10 18:38:32.891: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+*Sep 10 18:38:32.895: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:33.087: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:43.671: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:43.671: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:46.111: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 active 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:46.111: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:46.315: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.1 IPv4 Unicast topology base removed from session  BGP Notification sent
+KOLKATA-ROUTER#
+*Sep 10 18:38:53.831: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.1 passive 2/2 (peer in wrong AS) 2 bytes 0001
+KOLKATA-ROUTER#
+*Sep 10 18:38:53.831: %BGP-4-MSGDUMP: unsupported or mal-formatted message received from 100.0.0.1:
+FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF 003A 0104 0001 00B4 0202 0202 1D02 0601
+0400 0100 0102 0280 0002 0202 0002 0383 0100 0206 4104 0000 0001
+KOLKATA-ROUTER#
+*Sep 10 18:40:26.499: %BGP-5-ADJCHANGE: neighbor 100.0.0.1 Up
+KOLKATA-ROUTER#
+*Sep 10 18:41:22.307: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to up
+KOLKATA-ROUTER#
+*Sep 10 18:43:08.571: %BGP-5-ADJCHANGE: neighbor 103.0.0.2 Up
+KOLKATA-ROUTER#
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+ISP 1
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+Connected to Dynamips VM "ISP-1" (ID 10, type c7200) - Console port
+Press ENTER to get the prompt.
+
+This configuration is within the PCI bus capacity and is supported.
+
+Please refer to the following document "Cisco 7200 Series Port Adaptor
+Hardware Configuration Guidelines" on Cisco.com <http://www.cisco.com>
+for c7200 bandwidth points oversubscription and usage guidelines.
+
+
+2 FastEthernet interfaces
+4 Serial interfaces
+509K bytes of NVRAM.
+
+8192K bytes of Flash internal SIMM (Sector size 256K).
+SETUP: new interface FastEthernet0/0 placed in "shutdown" state
+SETUP: new interface FastEthernet0/1 placed in "shutdown" state
+SETUP: new interface Serial1/0 placed in "shutdown" state
+SETUP: new interface Serial1/1 placed in "shutdown" state
+SETUP: new interface Serial1/2 placed in "shutdown" state
+SETUP: new interface Serial1/3 placed in "shutdown" state
+% Crashinfo may not be recovered at bootflash:crashinfo
+% This file system device reports an error
+
+
+Press RETURN to get started!
+
+
+*Sep 10 18:10:02.091: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory
+*Sep 10 18:10:33.727: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Sep 10 18:10:33.731: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:33.739: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+*Sep 10 18:10:33.743: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+*Sep 10 18:10:33.755: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+*Sep 10 18:10:33.767: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+*Sep 10 18:10:33.783: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to up
+*Sep 10 18:10:34.811: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to up
+*Sep 10 18:10:34.811: %SYS-5-CONFIG_I: Configured from memory by console
+*Sep 10 18:10:36.047: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.0(1)M, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Wed 30-Sep-09 07:48 by prod_rel_team
+*Sep 10 18:10:36.047: %SNMP-5-COLDSTART: SNMP agent on host ISP-1 is undergoing a cold start
+*Sep 10 18:10:36.219: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Sep 10 18:10:36.223: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Sep 10 18:10:36.819: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Sep 10 18:10:36.823: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Sep 10 18:10:36.823: %LINK-5-CHANGED: Interface Serial1/0, changed state to administratively down
+*Sep 10 18:10:36.827: %LINK-5-CHANGED: Interface Serial1/1, changed state to administratively down
+*Sep 10 18:10:36.859: %LINK-5-CHANGED: Interface Serial1/2, changed state to administratively down
+*Sep 10 18:10:36.875: %LINK-5-CHANGED: Interface Serial1/3, changed state to administratively down
+*Sep 10 18:10:37.819: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Sep 10 18:10:37.827: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Sep 10 18:10:37.827: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to down
+*Sep 10 18:10:37.831: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to down
+*Sep 10 18:10:37.859: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to down
+*Sep 10 18:10:37.875: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to down
+ISP-1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+ISP-1(config)#int s1/1
+ISP-1(config-if)#ip addr 100.0.0.1 255.255.255.252
+ISP-1(config-if)#no sh
+ISP-1(config-if)#no shutdown
+ISP-1(config-if)#ex
+ISP-1(config-if)#exit
+*Sep 10 18:34:22.179: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+ISP-1(config-if)#exit
+*Sep 10 18:34:23.187: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to up
+ISP-1(config-if)#exit
+ISP-1(config)#int s1/0
+ISP-1(config-if)#no sh
+ISP-1(config-if)#no shutdown
+ISP-1(config-if)#ip addr 101.
+*Sep 10 18:34:39.443: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+ISP-1(config-if)#ip addr 101.0.0.1
+*Sep 10 18:34:40.451: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to up
+ISP-1(config-if)#ip addr 101.0.0.1 255.255.255.252
+ISP-1(config-if)#ex
+ISP-1(config-if)#exit
+ISP-1(config)#
+ISP-1(config)#rou
+ISP-1(config)#router bg
+ISP-1(config)#router bgp
+*Sep 10 18:35:05.003: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to down
+ISP-1(config)#router bgp 1
+ISP-1(config-router)#bgp
+ISP-1(config-router)#bgp rou
+ISP-1(config-router)#bgp router-id 2.2.2.2
+ISP-1(config-router)#network 100.0.0.0 mask 255.255.255.252
+ISP-1(config-router)#network 101.0.0.0 mask 255.255.255.252
+ISP-1(config-router)#nei
+ISP-1(config-router)#neighbor 100.0.0.2 remote
+ISP-1(config-router)#neighbor 100.0.0.2 remote-as 1
+ISP-1(config-router)#nei
+ISP-1(config-router)#neighbor 101.0.0.
+*Sep 10 18:37:10.279: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#neighbor 101.0.0.2
+*Sep 10 18:37:10.279: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#neighbor 101.0.0.2
+*Sep 10 18:37:12.515: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#neighbor 101.0.0.2 re
+*Sep 10 18:37:12.515: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#neighbor 101.0.0.2 remote
+ISP-1(config-router)#neighbor 101.0.0.2 remote-as 4
+*Sep 10 18:37:19.419: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#neighbor 101.0.0.2 remote-as 4
+ISP-1(config-router)#
+*Sep 10 18:37:19.419: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#
+*Sep 10 18:37:33.843: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#
+*Sep 10 18:37:33.843: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+*Sep 10 18:37:34.855: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#
+*Sep 10 18:37:34.855: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#
+*Sep 10 18:37:43.999: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#
+*Sep 10 18:37:43.999: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#
+*Sep 10 18:37:48.667: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#
+*Sep 10 18:37:48.667: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+*Sep 10 18:37:49.883: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config-router)#
+*Sep 10 18:37:49.883: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config-router)#^Z
+ISP-1#
+*Sep 10 18:37:52.523: %SYS-5-CONFIG_I: Configured from console by console
+ISP-1#
+*Sep 10 18:37:54.759: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1#sh
+*Sep 10 18:37:54.759: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1#sh
+ISP-1#show run
+Building configuration...
+
+Current configuration : 1626 bytes
+!
+! Last configuration change at 18:37:52 UTC Tue Sep 10 2019
+!
+upgrade fpd auto
+version 15.0
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname ISP-1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+!
+!
+!
+ip source-route
+no ip icmp rate-limit unreachable
+ --More--
+*Sep 10 18:38:01.979: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:01.983: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+*Sep 10 18:38:03.495: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:03.495: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+!
+ --More--
+*Sep 10 18:38:10.839: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+!
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ --More--
+*Sep 10 18:38:10.839: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ duplex auto
+ speed auto
+ !
+!
+ --More--
+*Sep 10 18:38:13.279: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+interface FastEthernet0/1
+ --More--
+*Sep 10 18:38:13.279: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ !
+!
+interface Serial1/0
+ ip address 101.0.0.1 255.255.255.252
+ serial restart-delay 0
+ !
+!
+interface Serial1/1
+ ip address 100.0.0.1 255.255.255.252
+ serial restart-delay 0
+ !
+ --More--
+*Sep 10 18:38:19.387: %BGP-3-NOTIFICATION: sent to neighbor 100.0.0.2 passive 2/8 (no supported AFI/SAFI) 3 bytes 000000 (timer expired)
+ --More--
+*Sep 10 18:38:21.731: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:21.731: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ --More--
+*Sep 10 18:38:25.543: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:25.543: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+!
+interface Serial1/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+ --More--
+*Sep 10 18:38:29.395: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ !
+!
+ --More--
+*Sep 10 18:38:29.399: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+interface Serial1/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+ !
+ --More--
+*Sep 10 18:38:32.835: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+!
+router bgp 1
+ --More--
+*Sep 10 18:38:32.839: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ no synchronization
+ bgp router-id 2.2.2.2
+ bgp log-neighbor-changes
+ network 100.0.0.0 mask 255.255.255.252
+ --More--
+*Sep 10 18:38:37.099: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:37.103: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ --More--
+*Sep 10 18:38:38.723: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ --More--
+*Sep 10 18:38:38.727: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+
+ISP-1#
+*Sep 10 18:38:49.671: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1#co
+*Sep 10 18:38:49.671: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1#cont
+*Sep 10 18:38:52.111: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 passive 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1#cont
+*Sep 10 18:38:52.111: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+ISP-1(config)#no rou
+ISP-1(config)#no route
+*Sep 10 18:38:59.623: %BGP-3-NOTIFICATION: received from neighbor 100.0.0.2 active 2/2 (peer in wrong AS) 2 bytes 0001
+ISP-1(config)#no router
+*Sep 10 18:38:59.623: %BGP_SESSION-5-ADJCHANGE: neighbor 100.0.0.2 IPv4 Unicast topology base removed from session  BGP Notification received
+ISP-1(config)#no router bg
+ISP-1(config)#no router bgp 1
+ISP-1(config)#router bg
+ISP-1(config)#router bgp 2
+ISP-1(config-router)#bgp
+ISP-1(config-router)#bgp rou
+ISP-1(config-router)#bgp router-id 2.2.2.2
+ISP-1(config-router)#ne
+ISP-1(config-router)#net
+ISP-1(config-router)#network 100.0.0.0 mask 255.255.255.252
+ISP-1(config-router)#net
+ISP-1(config-router)#network 101.0.0.0 mas
+ISP-1(config-router)#network 101.0.0.0 mask 255.255.255.252
+ISP-1(config-router)#nei
+ISP-1(config-router)#neighbor 100.0.0.2 remo
+ISP-1(config-router)#neighbor 100.0.0.2 remot
+ISP-1(config-router)#neighbor 100.0.0.2 remote-as 1
+ISP-1(config-router)#nei
+ISP-1(config-router)#neighbor 101.0.0.2 remot
+ISP-1(config-router)#neighbor 101.0.0.2 remote-as
+*Sep 10 18:40:32.467: %BGP-5-ADJCHANGE: neighbor 100.0.0.2 Up
+ISP-1(config-router)#neighbor 101.0.0.2 remote-as 4
+ISP-1(config-router)#ex
+ISP-1(config-router)#exit
+ISP-1(config)#end
+ISP-1#
+*Sep 10 18:40:43.795: %SYS-5-CONFIG_I: Configured from console by console
+ISP-1#wr
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+ISP-1#
+*Sep 10 18:43:55.179: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to up
+ISP-1#
+*Sep 10 18:47:35.015: %BGP-5-ADJCHANGE: neighbor 101.0.0.2 Up
+ISP-1#
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+ISP 2
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Connected to Dynamips VM "ISP-2" (ID 11, type c7200) - Console port
+Press ENTER to get the prompt.
+00) processor (revision A) with 491520K/32768K bytes of memory.Installed image archive
+
+Processor board ID 4279256517
+R7000 CPU at 150MHz, Implementation 39, Rev 2.1, 256KB L2, 512KB L3 Cache
+6 slot VXR midplane, Version 2.1
+
+Last reset from power-on
+
+PCI bus mb0_mb1 (Slots 0, 1, 3 and 5) has a capacity of 600 bandwidth points.
+Current configuration on bus mb0_mb1 has a total of 400 bandwidth points.
+This configuration is within the PCI bus capacity and is supported.
+
+PCI bus mb2 (Slots 2, 4, 6) has a capacity of 600 bandwidth points.
+Current configuration on bus mb2 has a total of 0 bandwidth points
+This configuration is within the PCI bus capacity and is supported.
+
+Please refer to the following document "Cisco 7200 Series Port Adaptor
+Hardware Configuration Guidelines" on Cisco.com <http://www.cisco.com>
+for c7200 bandwidth points oversubscription and usage guidelines.
+
+
+2 FastEthernet interfaces
+4 Serial interfaces
+509K bytes of NVRAM.
+
+8192K bytes of Flash internal SIMM (Sector size 256K).
+SETUP: new interface FastEthernet0/0 placed in "shutdown" state
+SETUP: new interface FastEthernet0/1 placed in "shutdown" state
+SETUP: new interface Serial1/0 placed in "shutdown" state
+SETUP: new interface Serial1/1 placed in "shutdown" state
+SETUP: new interface Serial1/2 placed in "shutdown" state
+SETUP: new interface Serial1/3 placed in "shutdown" state
+% Crashinfo may not be recovered at bootflash:crashinfo
+% This file system device reports an error
+
+
+Press RETURN to get started!
+
+
+*Sep 10 18:10:02.115: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory
+*Sep 10 18:10:33.495: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Sep 10 18:10:33.503: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:33.511: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+*Sep 10 18:10:33.515: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+*Sep 10 18:10:33.527: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+*Sep 10 18:10:33.539: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+*Sep 10 18:10:33.551: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+*Sep 10 18:10:34.451: %SYS-5-CONFIG_I: Configured from memory by console
+*Sep 10 18:10:34.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Sep 10 18:10:34.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Sep 10 18:10:34.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to down
+*Sep 10 18:10:34.603: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to down
+*Sep 10 18:10:34.603: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to down
+*Sep 10 18:10:34.607: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to down
+*Sep 10 18:10:35.059: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.0(1)M, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Wed 30-Sep-09 07:48 by prod_rel_team
+*Sep 10 18:10:35.059: %SNMP-5-COLDSTART: SNMP agent on host ISP-2 is undergoing a cold start
+*Sep 10 18:10:35.059: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Sep 10 18:10:35.059: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Sep 10 18:10:36.451: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Sep 10 18:10:36.459: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Sep 10 18:10:36.467: %LINK-5-CHANGED: Interface Serial1/0, changed state to administratively down
+*Sep 10 18:10:36.487: %LINK-5-CHANGED: Interface Serial1/1, changed state to administratively down
+*Sep 10 18:10:36.511: %LINK-5-CHANGED: Interface Serial1/2, changed state to administratively down
+*Sep 10 18:10:36.535: %LINK-5-CHANGED: Interface Serial1/3, changed state to administratively down
+ISP-2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+ISP-2(config)#int s1/2
+ISP-2(config-if)#no sh
+ISP-2(config-if)#no shutdown
+ISP-2(config-if)#ip addr 10
+*Sep 10 18:41:09.211: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+ISP-2(config-if)#ip addr 1030.0
+*Sep 10 18:41:10.219: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to up
+ISP-2(config-if)#ip addr 103.0.0.2 255.255.255.252
+ISP-2(config-if)#ex
+ISP-2(config-if)#exit
+ISP-2(config)#int s1/3
+ISP-2(config-if)#no sh
+ISP-2(config-if)#no shutdown
+ISP-2(config-if)#ip addr 102.0.
+*Sep 10 18:41:36.627: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+ISP-2(config-if)#ip addr 102.0.0.0
+*Sep 10 18:41:37.635: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to up
+ISP-2(config-if)#ip addr 102.0.0.2 255.255.255.252
+ISP-2(config-if)#ex
+ISP-2(config-if)#exit
+ISP-2(config)#
+ISP-2(config)#
+ISP-2(config)#router bgp 3
+ISP-2(config-router)#bg
+ISP-2(config-router)#bgp rou
+ISP-2(config-router)#bgp router-id 3.3.3.3
+ISP-2(config-router)#
+*Sep 10 18:42:04.799: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to down
+ISP-2(config-router)#net
+ISP-2(config-router)#network 103.0.0.0 mask 255.255.255.252
+ISP-2(config-router)#net
+ISP-2(config-router)#network 102.0.0.0 mas
+ISP-2(config-router)#network 102.0.0.0 mask 255.255.255.252
+ISP-2(config-router)#
+ISP-2(config-router)#
+ISP-2(config-router)#nei
+ISP-2(config-router)#neighbor 103.0.0.1 remo
+ISP-2(config-router)#neighbor 103.0.0.1 remot
+ISP-2(config-router)#neighbor 103.0.0.1 remote-as 1
+ISP-2(config-router)#nei
+ISP-2(config-router)#neighbor 102.0.0.1 remot
+ISP-2(config-router)#neighbor 102.0.0.1 remote-as 4
+ISP-2(config-router)#
+*Sep 10 18:43:08.475: %BGP-5-ADJCHANGE: neighbor 103.0.0.1 Up
+ISP-2(config-router)#ex
+ISP-2(config-router)#exit
+ISP-2(config)#end
+ISP-2#wr
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+
+*Sep 10 18:43:18.467: %SYS-5-CONFIG_I: Configured from console by console[OK]
+ISP-2#
+*Sep 10 18:45:54.859: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to up
+ISP-2#
+*Sep 10 18:47:52.535: %BGP-5-ADJCHANGE: neighbor 102.0.0.1 Up
+ISP-2#
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Delhi Router
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Connected to Dynamips VM "DELHI-ROUTER" (ID 12, type c7200) - Console port
+Press ENTER to get the prompt.
+6517
+R7000 CPU at 150MHz, Implementation 39, Rev 2.1, 256KB L2, 512KB L3 Cache
+6 slot VXR midplane, Version 2.1
+
+Last reset from power-on
+
+PCI bus mb0_mb1 (Slots 0, 1, 3 and 5) has a capacity of 600 bandwidth points.
+Current configuration on bus mb0_mb1 has a total of 400 bandwidth points.
+This configuration is within the PCI bus capacity and is supported.
+
+PCI bus mb2 (Slots 2, 4, 6) has a capacity of 600 bandwidth points.
+Current configuration on bus mb2 has a total of 0 bandwidth points
+This configuration is within the PCI bus capacity and is supported.
+
+Please refer to the following document "Cisco 7200 Series Port Adaptor
+Hardware Configuration Guidelines" on Cisco.com <http://www.cisco.com>
+for c7200 bandwidth points oversubscription and usage guidelines.
+
+
+2 FastEthernet interfaces
+4 Serial interfaces
+509K bytes of NVRAM.
+
+8192K bytes of Flash internal SIMM (Sector size 256K).
+SETUP: new interface FastEthernet0/0 placed in "shutdown" state
+SETUP: new interface FastEthernet0/1 placed in "shutdown" state
+SETUP: new interface Serial1/0 placed in "shutdown" state
+SETUP: new interface Serial1/1 placed in "shutdown" state
+SETUP: new interface Serial1/2 placed in "shutdown" state
+SETUP: new interface Serial1/3 placed in "shutdown" state
+% Crashinfo may not be recovered at bootflash:crashinfo
+% This file system device reports an error
+
+
+Press RETURN to get started!
+
+
+*Sep 10 18:10:02.199: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-table No such file or directory
+*Sep 10 18:10:32.951: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Sep 10 18:10:32.955: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:32.963: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+*Sep 10 18:10:32.971: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+*Sep 10 18:10:32.983: %LINK-3-UPDOWN: Interface Serial1/1, changed state to up
+*Sep 10 18:10:32.995: %LINK-3-UPDOWN: Interface Serial1/2, changed state to up
+*Sep 10 18:10:33.007: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+*Sep 10 18:10:33.959: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+*Sep 10 18:10:33.959: %SYS-5-CONFIG_I: Configured from memory by console
+*Sep 10 18:10:34.395: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Sep 10 18:10:34.395: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to down
+*Sep 10 18:10:34.395: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/1, changed state to down
+*Sep 10 18:10:34.395: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/2, changed state to down
+*Sep 10 18:10:34.395: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to down
+*Sep 10 18:10:35.291: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.0(1)M, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Wed 30-Sep-09 07:48 by prod_rel_team
+*Sep 10 18:10:35.343: %SNMP-5-COLDSTART: SNMP agent on host DELHI-ROUTER is undergoing a cold start
+*Sep 10 18:10:35.519: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Sep 10 18:10:35.523: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Sep 10 18:10:35.975: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Sep 10 18:10:35.979: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Sep 10 18:10:35.979: %LINK-5-CHANGED: Interface Serial1/0, changed state to administratively down
+*Sep 10 18:10:35.995: %LINK-5-CHANGED: Interface Serial1/1, changed state to administratively down
+*Sep 10 18:10:36.027: %LINK-5-CHANGED: Interface Serial1/2, changed state to administratively down
+*Sep 10 18:10:36.055: %LINK-5-CHANGED: Interface Serial1/3, changed state to administratively down
+*Sep 10 18:10:36.975: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+DELHI-ROUTER#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+DELHI-ROUTER(config)#int s1/0
+DELHI-ROUTER(config-if)#no sh
+DELHI-ROUTER(config-if)#no shutdown
+DELHI-ROUTER(config-if)#ip
+*Sep 10 18:43:42.227: %LINK-3-UPDOWN: Interface Serial1/0, changed state to up
+DELHI-ROUTER(config-if)#ip addr
+*Sep 10 18:43:43.235: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/0, changed state to up
+DELHI-ROUTER(config-if)#ip addr 101.0.0.2 255.255.255.252
+DELHI-ROUTER(config-if)#ex
+DELHI-ROUTER(config-if)#exit
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#int s1/3
+DELHI-ROUTER(config-if)#no sh
+DELHI-ROUTER(config-if)#no shutdown
+DELHI-ROUTER(config-if)#ip addr
+*Sep 10 18:45:52.123: %LINK-3-UPDOWN: Interface Serial1/3, changed state to up
+DELHI-ROUTER(config-if)#ip addr 102.0
+*Sep 10 18:45:53.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial1/3, changed state to up
+DELHI-ROUTER(config-if)#ip addr 102.0.0.1 255.255.255.252
+DELHI-ROUTER(config-if)#ex
+DELHI-ROUTER(config-if)#exit
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#router b
+DELHI-ROUTER(config)#router bgp 4
+DELHI-ROUTER(config-router)#bg
+DELHI-ROUTER(config-router)#bgp router
+DELHI-ROUTER(config-router)#bgp router-id 4.4.4.4
+DELHI-ROUTER(config-router)#net
+DELHI-ROUTER(config-router)#network 101.0.0.0 mask 255.255.255.252
+DELHI-ROUTER(config-router)#net
+DELHI-ROUTER(config-router)#network 102.0
+% Incomplete command.
+
+DELHI-ROUTER(config-router)#network 102.0.0.0 mas
+DELHI-ROUTER(config-router)#network 102.0.0.0 mask 255.255.255.252
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#nei
+DELHI-ROUTER(config-router)#neighbor 101.0.0.1 remot
+DELHI-ROUTER(config-router)#neighbor 101.0.0.1 remote-as 2
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#nei
+DELHI-ROUTER(config-router)#neighbor
+*Sep 10 18:47:29.487: %BGP-5-ADJCHANGE: neighbor 101.0.0.1 Up
+DELHI-ROUTER(config-router)#neighbor 102.0.0.2 remo
+DELHI-ROUTER(config-router)#neighbor 102.0.0.2 remot
+DELHI-ROUTER(config-router)#neighbor 102.0.0.2 remote-as 3
+DELHI-ROUTER(config-router)#end
+DELHI-ROUTER#we
+*Sep 10 18:47:45.123: %SYS-5-CONFIG_I: Configured from console by console
+DELHI-ROUTER#we
+% Incomplete command.
+
+DELHI-ROUTER#
+DELHI-ROUTER#wr
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+DELHI-ROUTER#
+*Sep 10 18:47:53.015: %BGP-5-ADJCHANGE: neighbor 102.0.0.2 Up
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#sho
+DELHI-ROUTER#show ip bgp
+DELHI-ROUTER#show ip bgp
+BGP table version is 8, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  100.0.0.0/30     102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                0             0 2 i
+*  101.0.0.0/30     101.0.0.1                0             0 2 i
+*>                  0.0.0.0                  0         32768 i
+*  102.0.0.0/30     102.0.0.2                0             0 3 i
+*>                  0.0.0.0                  0         32768 i
+*> 103.0.0.0/30     102.0.0.2                0             0 3 i
+*                   101.0.0.1                              0 2 1 i
+*  200.0.0.0        102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                              0 2 1 i
+*  201.0.0.0        102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                              0 2 1 i
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#trac
+DELHI-ROUTER#traceroute 200.0.0.1
+
+Type escape sequence to abort.
+Tracing the route to 200.0.0.1
+
+  1 101.0.0.1 208 msec 184 msec 232 msec
+  2 100.0.0.2 [AS 2] 652 msec 812 msec 816 msec
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#acce
+DELHI-ROUTER(config)#access-list 1 per
+DELHI-ROUTER(config)#access-list 1 permit 200.0.0.0 0.0.0.255
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#route
+DELHI-ROUTER(config)#route-ma
+DELHI-ROUTER(config)#route-map test
+DELHI-ROUTER(config)#route-map testper
+DELHI-ROUTER(config)#route-map test per
+DELHI-ROUTER(config)#route-map test permit 10
+DELHI-ROUTER(config-route-map)#
+DELHI-ROUTER(config-route-map)#matc
+DELHI-ROUTER(config-route-map)#match add
+DELHI-ROUTER(config-route-map)#match addre
+DELHI-ROUTER(config-route-map)#match ip add
+DELHI-ROUTER(config-route-map)#match ip address 1
+DELHI-ROUTER(config-route-map)#set
+DELHI-ROUTER(config-route-map)#set weigh
+DELHI-ROUTER(config-route-map)#set weight 500
+DELHI-ROUTER(config-route-map)#exit
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#route-ma
+DELHI-ROUTER(config)#route-map test per
+DELHI-ROUTER(config)#route-map test permit 20
+DELHI-ROUTER(config-route-map)#exit
+DELHI-ROUTER(config)#router bgp
+DELHI-ROUTER(config)#router bgp 4
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#nei
+DELHI-ROUTER(config-router)#neighbor 102.0.0.2 route-ma
+DELHI-ROUTER(config-router)#neighbor 102.0.0.2 route-map test in
+DELHI-ROUTER(config-router)#
+DELHI-ROUTER(config-router)#^Z
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+*Sep 10 18:54:59.091: %SYS-5-CONFIG_I: Configured from console by console
+DELHI-ROUTER#cle
+DELHI-ROUTER#clear ip bgp
+DELHI-ROUTER#clear ip bgp * soft
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#sho
+DELHI-ROUTER#show ip bgp
+DELHI-ROUTER#show ip bgp
+BGP table version is 9, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  100.0.0.0/30     102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                0             0 2 i
+*  101.0.0.0/30     101.0.0.1                0             0 2 i
+*>                  0.0.0.0                  0         32768 i
+*  102.0.0.0/30     102.0.0.2                0             0 3 i
+*>                  0.0.0.0                  0         32768 i
+*> 103.0.0.0/30     102.0.0.2                0             0 3 i
+*                   101.0.0.1                              0 2 1 i
+*> 200.0.0.0        102.0.0.2                            500 3 1 i
+*                   101.0.0.1                              0 2 1 i
+*  201.0.0.0        102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                              0 2 1 i
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#trac
+DELHI-ROUTER#traceroute 200.0.0.1
+
+Type escape sequence to abort.
+Tracing the route to 200.0.0.1
+
+  1 102.0.0.2 208 msec 400 msec 404 msec
+  2 103.0.0.1 [AS 3] 716 msec 632 msec 608 msec
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+DELHI-ROUTER(config)#acce
+DELHI-ROUTER(config)#access-list 1 201.0.0.0 0.0.0.255
+                                   ^
+% Invalid input detected at '^' marker.
+
+DELHI-ROUTER(config)#access-list 1 permit 201.0.0.0 0.0.0.255
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#
+DELHI-ROUTER(config)#^Z
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+*Sep 10 18:57:32.119: %SYS-5-CONFIG_I: Configured from console by console
+DELHI-ROUTER#
+DELHI-ROUTER#sho
+DELHI-ROUTER#show acce
+DELHI-ROUTER#show access-l
+DELHI-ROUTER#show access-lists
+Standard IP access list 1
+    10 permit 200.0.0.0, wildcard bits 0.0.0.255 (2 matches)
+    20 permit 201.0.0.0, wildcard bits 0.0.0.255 (1 match)
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#clear ip bgp * soft
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#sho
+DELHI-ROUTER#show ip bgp
+DELHI-ROUTER#show ip bgp
+BGP table version is 10, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  100.0.0.0/30     102.0.0.2                              0 3 1 i
+*>                  101.0.0.1                0             0 2 i
+*  101.0.0.0/30     101.0.0.1                0             0 2 i
+*>                  0.0.0.0                  0         32768 i
+*  102.0.0.0/30     102.0.0.2                0             0 3 i
+*>                  0.0.0.0                  0         32768 i
+*> 103.0.0.0/30     102.0.0.2                0             0 3 i
+*                   101.0.0.1                              0 2 1 i
+*> 200.0.0.0        102.0.0.2                            500 3 1 i
+*                   101.0.0.1                              0 2 1 i
+*> 201.0.0.0        102.0.0.2                            500 3 1 i
+*                   101.0.0.1                              0 2 1 i
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#traceroute 200.0.0.1
+
+Type escape sequence to abort.
+Tracing the route to 200.0.0.1
+
+  1 102.0.0.2 200 msec 408 msec 408 msec
+  2 103.0.0.1 [AS 3] 812 msec 812 msec 812 msec
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#traceroute 201.0.0.1
+
+Type escape sequence to abort.
+Tracing the route to 201.0.0.1
+
+  1 102.0.0.2 404 msec 408 msec 404 msec
+  2 103.0.0.1 [AS 3] 812 msec 800 msec 812 msec
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
+DELHI-ROUTER#
